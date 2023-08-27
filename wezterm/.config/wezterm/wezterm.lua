@@ -18,7 +18,7 @@ config.hide_tab_bar_if_only_one_tab = true
 
 -- 字体设置
 config.font = wezterm.font("Sarasa Mono SC Nerd Font")
-config.font_size = 14
+config.font_size = 12
 
 -- 主题设置
 config.color_scheme = chooseTerminalTheme(wezterm.gui.get_appearance())

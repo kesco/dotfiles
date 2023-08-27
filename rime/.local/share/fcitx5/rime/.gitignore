@@ -1,0 +1,6 @@
+build/
+sync/
+luna_pinyin.userdb/
+.place_holder
+installation.yaml
+user.yaml
