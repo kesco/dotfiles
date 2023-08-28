@@ -8,7 +8,7 @@
 
 -- 判断是否使用Neovide GUI，设置GUI字体
 if vim.g.neovide then
-  vim.o.guifont = "Sarasa Mono SC Nerd Font:h14"
+  vim.o.guifont = "Sarasa Mono SC Nerd Font:h12"
 end
 
 -- 设置KDL文件格式识别
