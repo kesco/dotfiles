@@ -1,11 +1,7 @@
 local wezterm = require("wezterm")
 
 local function chooseTerminalTheme(appearance)
-	if appearance:find("Dark") then
-		return "Tokyo Night (Gogh)"
-	else
-		return "Tokyo Night Light (Gogh)"
-	end
+	return "Dracula (Official)"
 end
 
 local config = wezterm.config_builder()
@@ -14,6 +10,7 @@ config:set_strict_mode(true)
 
 -- Tab设置
 config.tab_bar_at_bottom = true
+config.use_fancy_tab_bar = false
 config.hide_tab_bar_if_only_one_tab = true
 
 -- 字体设置
