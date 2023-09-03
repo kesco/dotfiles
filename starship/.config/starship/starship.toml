@@ -93,7 +93,7 @@ format = '[ ](#FCA17D)[ $symbol $branch ]($style)[](#FCA17D)'
 
 [git_status]
 style = "bg:#FFDC72"
-format = '[ ](#FFDC72)[ $all_status$ahead_behind ]($style)[](#FFDC72)'
+format = '([ ](#FFDC72)[ $all_status$ahead_behind ]($style)[](#FFDC72))'
 
 [golang]
 symbol = " "
