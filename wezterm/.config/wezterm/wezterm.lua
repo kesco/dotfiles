@@ -21,6 +21,6 @@ config.font_size = 12
 config.color_scheme = chooseTerminalTheme(wezterm.gui.get_appearance())
 
 -- 其它设置
-config.default_prog = { "/usr/bin/fish", "-i" }
+config.default_prog = { "fish", "-i" }
 
 return config
