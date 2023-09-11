@@ -7,6 +7,8 @@ M.disabled = {
 		["<leader>f"] = "",
 		["<leader>fb"] = "",
 		["<C-n>"] = "",
+		["<tab>"] = "",
+		["<S-tab>"] = "",
 	},
 }
 
@@ -22,6 +24,23 @@ M.general = {
 M.nvimtree = {
 	n = {
 		["<leader>e"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree" },
+	},
+}
+
+M.tabufline = {
+	n = {
+		["<S-l>"] = {
+			function()
+				require("nvchad.tabufline").tabuflineNext()
+			end,
+			"Goto next buffer",
+		},
+		["<S-h>"] = {
+			function()
+				require("nvchad.tabufline").tabuflinePrev()
+			end,
+			"Goto prev buffer",
+		},
 	},
 }
 

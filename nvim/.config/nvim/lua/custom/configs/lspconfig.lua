@@ -1,30 +1,38 @@
 local on_attach = require("plugins.configs.lspconfig").on_attach
 local capabilities = require("plugins.configs.lspconfig").capabilities
 
-local lspconfig = require "lspconfig"
+local lspconfig = require("lspconfig")
+local lspConfigUtil = require("lspconfig.util")
 
 -- if you just want default config for the servers then put them in a table
 local servers = {
-  "bashls",
-  "cssls",
-  "html",
-  "neocmake",
-  "tsserver",
+	"bashls",
+	"cssls",
+	"html",
+	"neocmake",
+	"tsserver",
 }
 
 -- Clangd特殊处理
 local clangdCapabilities = vim.lsp.protocol.make_client_capabilities()
 clangdCapabilities.offsetEncoding = "utf-8"
-lspconfig["clangd"].setup {
-    on_attach = on_attach,
-    capabilities = clangdCapabilities,
-}
+lspconfig["clangd"].setup({
+	on_attach = on_attach,
+	capabilities = clangdCapabilities,
+})
+
+-- Zls特殊处理
+lspconfig["zls"].setup({
+	root_dir = lspConfigUtil.root_pattern("zls.json", ".git", "build.zig"),
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
 
 for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup {
-    on_attach = on_attach,
-    capabilities = capabilities,
-  }
+	lspconfig[lsp].setup({
+		on_attach = on_attach,
+		capabilities = capabilities,
+	})
 end
 
 --
