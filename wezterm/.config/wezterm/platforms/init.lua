@@ -4,6 +4,7 @@ local gon = require("utils.get_os_name")
 ---@class SystemConfig
 ---@field fontSize integer
 ---@field shell table
+---@field env table|nil
 local SystemConfig = {}
 
 local osName, archName = gon.get_os_name()
@@ -19,7 +20,8 @@ end
 ---@class Platforms
 local M = {
 	fontSize = sysConf.fontSize,
-	shell = sysConf.shell
+	shell = sysConf.shell,
+	env = sysConf.env
 }
 
 return M

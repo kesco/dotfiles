@@ -23,6 +23,9 @@ config.color_scheme = chooseTerminalTheme(wezterm.gui.get_appearance())
 
 -- 其它设置
 config.default_prog = platforms.shell
+if platforms.env then
+	config.set_environment_variables = platforms.env
+end
 
 
 return config
