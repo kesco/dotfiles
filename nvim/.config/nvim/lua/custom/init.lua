@@ -6,10 +6,9 @@
 --   command = "tabdo wincmd =",
 -- })
 
--- 判断是否使用Neovide GUI，设置GUI字体
-if vim.g.neovide then
-  vim.o.guifont = "Sarasa Mono SC Nerd Font:h12"
-end
+local vendor = require("custom.vendor")
+
+vendor:Setup()
 
 -- 设置KDL文件格式识别
 vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
