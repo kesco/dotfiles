@@ -23,3 +23,4 @@ vim.opt.clipboard = "unnamedplus"
 
 -- 使用相对行号
 vim.opt.relativenumber = true
+

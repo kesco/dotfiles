@@ -2,6 +2,7 @@ local M = {}
 
 M.treesitter = {
 	ensure_installed = {
+		"bash",
 		"c",
 		"cmake",
 		"cpp",
@@ -22,6 +23,7 @@ M.treesitter = {
 		"lua",
 		"markdown",
 		"markdown_inline",
+		"regex",
 		"rust",
 		"smali",
 		"toml",
