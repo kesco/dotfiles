@@ -27,5 +27,4 @@ if platforms.env then
 	config.set_environment_variables = platforms.env
 end
 
-
 return config

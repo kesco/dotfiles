@@ -50,6 +50,23 @@ M.telescope = {
 		["<leader>ss"] = { "<cmd> Telescope lsp_document_symbols <CR>", "document symbols" },
 		["<leader>sd"] = { "<cmd> Telescope lsp_dynamic_workspace_symbols <CR>", "workspace symbols" },
 		["<leader>ld"] = { "<cmd> Telescope diagnostics <CR>", "workspace diagnostics" },
+		["<leader>ln"] = {
+			function()
+				require("telescope").extensions.notify.notify()
+			end,
+			"List all history notifications.",
+		},
+	},
+}
+
+M.notify = {
+	n = {
+		["<leader>un"] = {
+			function()
+				require("notify").dismiss({ silent = true, pending = true })
+			end,
+			"Dismiss all Notifications",
+		},
 	},
 }
 
