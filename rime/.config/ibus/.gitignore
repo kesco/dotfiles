@@ -1,1 +1,5 @@
 bus/
+build/
+rime_ice.userdb/
+installation.yaml
+user.yaml
