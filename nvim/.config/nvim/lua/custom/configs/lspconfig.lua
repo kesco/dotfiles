@@ -5,7 +5,7 @@ local lspconfig = require("lspconfig")
 local lspConfigUtil = require("lspconfig.util")
 
 -- if you just want default config for the servers then put them in a table
-local servers = {
+local lspBatch = {
 	"bashls",
 	"cssls",
 	"html",
@@ -28,7 +28,14 @@ lspconfig["zls"].setup({
 	capabilities = capabilities,
 })
 
-for _, lsp in ipairs(servers) do
+local jsonlsCapabilities = vim.lsp.protocol.make_client_capabilities()
+jsonlsCapabilities.textDocument.completion.completionItem.snippetSupport = true
+lspconfig["jsonls"].setup({
+	on_attach = on_attach,
+	capabilities = jsonlsCapabilities,
+})
+
+for _, lsp in ipairs(lspBatch) do
 	lspconfig[lsp].setup({
 		on_attach = on_attach,
 		capabilities = capabilities,
