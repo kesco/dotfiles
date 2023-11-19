@@ -18,9 +18,20 @@ vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
   end
 })
 
+-- C++ 20 Module
+vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
+	pattern = {"*.cppm", "*.mpp"},
+  callback = function(_)
+		vim.bo.filetype = "cpp"
+  end
+})
+
 -- 使用系统剪贴板
 vim.opt.clipboard = "unnamedplus"
 
 -- 使用相对行号
 vim.opt.relativenumber = true
+
+-- 设置默认的Shell为Fish
+vim.opt.shell = "fish"
 
