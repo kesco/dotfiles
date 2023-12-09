@@ -1,0 +1,18 @@
+{
+	"namespace": {
+		"prefix": "ns",
+		"body": [
+			"namespace ${1:MyNamespace} {",
+			"\t$0",
+			"} /* namespace ${1:MyNamespace} */"
+		]
+	},
+	"namespace anonymouse": {
+		"prefix": "nsa",
+		"body": [
+			"namespace {",
+			"\t$1",
+			"} /* namespace anonymouse */"
+		]
+	}
+}

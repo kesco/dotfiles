@@ -35,3 +35,6 @@ vim.opt.relativenumber = true
 -- 设置默认的Shell为Fish
 vim.opt.shell = "fish"
 
+-- 定制的Code Snippets
+vim.g.vscode_snippets_path = "~/.local/share/snippets"
+
