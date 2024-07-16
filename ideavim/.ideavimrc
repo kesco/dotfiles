@@ -1,0 +1,5 @@
+" 相对行号
+set relativenumber
+" 使用系统剪切板
+set clipboard=unnamedplus
+
