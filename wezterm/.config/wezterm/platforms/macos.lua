@@ -16,9 +16,9 @@ local M = {
 
 function M:Init(arch)
 	if "arm" == arch then
-		self.shell = { "/opt/homebrew/bin/fish", "-i" }
+		self.shell = { "/opt/homebrew/bin/fish", "-l" }
 	else
-		self.shell = { "/usr/local/bin/fish", "-i" }
+		self.shell = { "/usr/local/bin/fish", "-l" }
 	end
 end
 

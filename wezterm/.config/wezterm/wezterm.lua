@@ -2,7 +2,11 @@ local wezterm = require("wezterm")
 local platforms = require("platforms")
 
 local function chooseTerminalTheme(appearance)
-	return "Dracula (Official)"
+	if appearance:find("Dark") then
+		return "Catppuccin Frappé (Gogh)"
+	else
+		return "Catppuccin Latte (Gogh)"
+	end
 end
 
 local config = wezterm.config_builder()
