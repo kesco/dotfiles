@@ -1,4 +1,5 @@
 local envHome = os.getenv("HOME")
+local envHomebrewOnArch = "/opt/homebrew/bin:/opt/homebrew/sbin"
 local envAndroidHome = envHome .. "/Library/Android/sdk"
 local envVoltaHome = envHome .. "/.volta"
 local envPath = envHome .. "/.cargo/bin:"
@@ -20,6 +21,7 @@ local M = {
 function M:Init(arch)
 	if "arm" == arch then
 		self.shell = { "/opt/homebrew/bin/fish", "-l" }
+		self.env.PATH = envHomebrewOnArch .. ":" .. envPath
 	else
 		self.shell = { "/usr/local/bin/fish", "-l" }
 	end
